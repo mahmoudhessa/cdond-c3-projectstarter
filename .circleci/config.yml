@@ -352,7 +352,7 @@ workflows:
       - hello:
           filters:
             branches:
-              ignore: main
+              ignore: Master
       - Frontend-build
       - Backend-build
       - Frontend-test:
