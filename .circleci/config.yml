@@ -384,6 +384,6 @@ workflows:
           requires:
             - Frontend-deploy
             - Backend-deploy
-      - Clean-old-infrastructure:
-          requires:
-            - Smoke-test
+      # - Clean-old-infrastructure:
+      #     requires:
+      #       - Smoke-test
