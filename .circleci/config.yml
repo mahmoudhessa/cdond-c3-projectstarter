@@ -396,9 +396,9 @@ workflows:
           filters:
             branches:
               only: [Master]
-      - Clean-old-infrastructure:
-          requires:
-            - Smoke-test
-          filters:
-            branches:
-              only: [Master]
+      # - Clean-old-infrastructure:
+      #     requires:
+      #       - Smoke-test
+      #     filters:
+      #       branches:
+      #         only: [Master]
