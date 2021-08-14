@@ -62,7 +62,7 @@ export class CheckPropertiesValue extends JoiCommandValidator<CreateEmployee> {
       city: joi.string().required(),
       salary: joi
         .string()
-        .regex(/^\d+$/)
+        .regex()
         .required(),
       effectiveDate: joi
         .string()
