@@ -190,7 +190,7 @@ jobs:
           command: |
             aws cloudformation deploy \
               --stack-name udapeople-frontend-${CIRCLE_WORKFLOW_ID} \
-              --template-file .circleci/files/frontend1.yml \
+              --template-file .circleci/files/frontend.yml \
               --region ${AWS_DEFAULT_REGION} \
               --parameter-overrides ID="${CIRCLE_WORKFLOW_ID}"
       - run:
@@ -198,7 +198,7 @@ jobs:
           command: |
             aws cloudformation deploy \
               --stack-name udapeople-backend-${CIRCLE_WORKFLOW_ID} \
-              --template-file .circleci/files/backend1.yml \
+              --template-file .circleci/files/backend.yml \
               --region ${AWS_DEFAULT_REGION} \
               --parameter-overrides ID="${CIRCLE_WORKFLOW_ID}"
       - run:
@@ -293,7 +293,7 @@ jobs:
       - run:
           name: frontend Smoke test
           command: |
-            URL="http://udapeople-s3bucket-${CIRCLE_WORKFLOW_ID}.s3-website.us-east-1.amazonaws.com/#/employees"
+            URL="http://udapeople-s3bucket-${CIRCLE_WORKFLOW_ID}.s3-website.us-east-4.amazonaws.com/#/employees"
             if curl -s ${URL} | grep "Welcome"
             then
               return 0
