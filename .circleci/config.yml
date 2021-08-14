@@ -371,7 +371,10 @@ workflows:
       - Create-infrastructure:
           requires:
             - Backend-analysis
-            - Frontend-analysis      
+            - Frontend-analysis
+          filters:
+            branches:
+              only: [Master]      
       - Backend-deploy:
           requires:
             - Create-infrastructure
@@ -382,11 +385,20 @@ workflows:
       - Frontend-deploy:
           requires:
             - Create-infrastructure
+          filters:
+            branches:
+              only: [Master]
 
       - Smoke-test:
           requires:
             - Frontend-deploy
             - Backend-deploy
+          filters:
+            branches:
+              only: [Master]
       - Clean-old-infrastructure:
           requires:
             - Smoke-test
+          filters:
+            branches:
+              only: [Master]
