@@ -125,7 +125,7 @@ jobs:
           name: Scan frontend Code
           command: |
             cd frontend
-            npm audit  --audit-level=critical --force
+            npm audit  --audit-level=critical 
       - slack/status
 
   Backend-build:
@@ -176,7 +176,7 @@ jobs:
           name: Scan backend Code
           command: |
             cd backend
-            npm audit fix --audit-level=critical --force
+            npm audit fix --audit-level=critical 
       - slack/status
 
   Create-infrastructure:
