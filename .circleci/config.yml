@@ -375,6 +375,9 @@ workflows:
       - Backend-deploy:
           requires:
             - Create-infrastructure
+          filters:
+            branches:
+              only: [Master]
 
       - Frontend-deploy:
           requires:
