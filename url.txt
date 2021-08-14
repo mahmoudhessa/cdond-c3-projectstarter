@@ -1,4 +1,5 @@
 github URL : https://github.com/mahmoudhessa/cdond-c3-projectstarter
-Front end (S3): http://udapeople-bec27a1.s3-website.us-east-1.amazonaws.com/
-CloudFront : d2szybv3grv9ah.cloudfront.net
-back-end server in EC2 : http://54.80.104.36:3030/
+Front end (S3): http://udapeople-s3bucket-9c7c1bf7-3743-4f61-bb85-400a3e5d3ff7.s3-website-us-east-1.amazonaws.com/
+CloudFront : http://d31lt5sb6kjhl7.cloudfront.net/
+back-end server in EC2 : http://ec2-54-88-193-26.compute-1.amazonaws.com:3030
+Prometheus URL : http://ec2-3-219-217-3.compute-1.amazonaws.com:9090
